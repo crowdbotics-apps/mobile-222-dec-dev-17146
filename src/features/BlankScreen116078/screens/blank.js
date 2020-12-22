@@ -35,11 +35,13 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Sample text input placeholder"
-        editable={true}
-        style={styles.TextInput_3}
         value={this.state.TextInput_3}
         onChangeText={nextValue => this.setState({ TextInput_3: nextValue })}
       />
+      <View style={styles.View_4}>
+        <View />
+        <View />
+      </View>
     </View>
   )
 }
@@ -54,5 +56,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 3,
     borderBottomWidth: 3
   },
-  TextInput_3: { width: "100%" }
+  TextInput_3: {},
+  View_4: { flexDirection: "row" },
+  View_5: {},
+  View_6: {}
 })
