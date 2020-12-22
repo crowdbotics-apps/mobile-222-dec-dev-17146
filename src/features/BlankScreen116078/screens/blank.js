@@ -24,9 +24,35 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = {}
+  state = { TextInput_3: "" }
 
-  render = () => <View />
+  render = () => (
+    <View>
+      <Image
+        resizeMode="contain"
+        source={{ uri: "https://via.placeholder.com/150" }}
+        style={styles.Image_2}
+      />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        editable={true}
+        style={styles.TextInput_3}
+        value={this.state.TextInput_3}
+        onChangeText={nextValue => this.setState({ TextInput_3: nextValue })}
+      />
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({ View_1: {} })
+const styles = StyleSheet.create({
+  View_1: {},
+  Image_2: {
+    height: 100,
+    borderWidth: 3,
+    borderLeftWidth: 3,
+    borderRightWidth: 3,
+    borderTopWidth: 3,
+    borderBottomWidth: 3
+  },
+  TextInput_3: { width: "100%" }
+})
